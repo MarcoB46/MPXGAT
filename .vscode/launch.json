@@ -1,0 +1,119 @@
+// MULTIPLEX_SAGE_DATASET_CUT = 1
+// RANDOM_HORIZONTAL_EMBEDDINGS = 2
+// RANDOM_SPLIT_DATASET_CUT = 3
+// TOP_K_LAYERS_DATASET = 4
+// RANDOM_MULTIPLEX_GRAPH = 5
+
+// DROSOPHILA = 0
+// ARXIV = 1
+// FFTWYT = 2
+// ALL_DATASETS = 3
+{
+    "configurations": [
+        {
+            "name": "MPXGAT multiplex_sage_dataset_cut",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/mpxgat_main.py",
+            "justMyCode": true,
+            "console": "integratedTerminal",
+            "logToFile": true,
+            "args": [
+                "--print_dataset_info",
+                "True",
+                "--experiment",
+                "1",
+                "--targetDataset",
+                "2",
+                "--number_of_iterations",
+                "10"
+            ]
+        },
+        {
+            "name": "MPXGAT random horizontal embeddings",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/mpxgat_main.py",
+            "justMyCode": true,
+            "console": "integratedTerminal",
+            "logToFile": true,
+            "args": [
+                // "--print_dataset_info",
+                // "True",
+                "--experiment",
+                "2",
+                "--targetDataset",
+                "0",
+                "--number_of_iterations",
+                "10"
+            ]
+        },
+        {
+            "name": "MPXGAT random split dataset cut",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/mpxgat_main.py",
+            "justMyCode": true,
+            "console": "integratedTerminal",
+            "logToFile": true,
+            "args": [
+                // "--print_dataset_info",
+                // "True",
+                "--experiment",
+                "3",
+                "--targetDataset",
+                "1",
+                "--number_of_iterations",
+                "10"
+            ]
+        },
+        {
+            "name": "MPXGAT top k layers dataset cut",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/mpxgat_main.py",
+            "justMyCode": true,
+            "console": "integratedTerminal",
+            "logToFile": true,
+            "args": [
+                // "--print_dataset_info",
+                // "True",
+                "--experiment",
+                "4",
+                "--targetDataset",
+                "0",
+                "--number_of_iterations",
+                "10"
+            ]
+        },
+        {
+            "name": "MPXGAT random multiplex graph",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/mpxgat_main.py",
+            "justMyCode": true,
+            "console": "integratedTerminal",
+            "logToFile": true,
+            "args": [
+                // "--print_dataset_info",
+                // "True",
+                "--experiment",
+                "5",
+                "--targetDataset",
+                "0",
+                "--number_of_iterations",
+                "10"
+            ]
+        },
+        {
+            "name": "Python: ex",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/link_pred_example.py",
+            "justMyCode": true,
+            "console": "integratedTerminal",
+            "logToFile": true,
+            
+        }
+    ]
+}

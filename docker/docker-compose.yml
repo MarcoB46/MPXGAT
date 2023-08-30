@@ -1,0 +1,20 @@
+# a docker compose stack with a single service, that is the runner of the python envorinment
+# it maps the project root to /usr/src/mpxgat
+
+# the docker-compose.yml file is used to build the image and run the container
+name: mpxgat
+services:
+  python:
+    container_name: main
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/usr/src/mpxgat
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
